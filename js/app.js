@@ -34,9 +34,23 @@ const setSection = (cont, header, a, b) => {
 
 setHeader("Natalia's page");
 
-const containers = document.querySelectorAll(".landing__container");
+// const containers = document.querySelectorAll(".landing__container");
 
-setSection(
+// IMPRVEMENT 1: As we are recovering containers and adding the data, we are triplicating
+// the functions calls. Maybe we can come up with a cleaner way with less code?
+
+document
+  .querySelectorAll(".landing__container")
+  .forEach((sectionElm, index) => {
+    setSection(
+      section,
+      `This is Section ${index + 1}`,
+      "This is the first paragraph with some information in it.",
+      "This is the second paragraph with some information in it."
+    );
+  });
+
+/*setSection(
   containers[0],
   "This is Section 1",
   "This is the first paragraph with some information in it.",
@@ -55,7 +69,7 @@ setSection(
   "This is Section 3",
   "This is the first paragraph with some information in it.",
   "This is the second paragraph with some information in it."
-);
+);*/
 
 //TIP: 2 try to remove the console.logs
 console.log(containers);
