@@ -36,19 +36,25 @@ setHeader("Natalia's page");
 
 // const containers = document.querySelectorAll(".landing__container");
 
-// IMPRVEMENT 1: As we are recovering containers and adding the data, we are triplicating
+// IMPROVEMENT 1: As we are recovering containers and adding the data, we are triplicating
 // the functions calls. Maybe we can come up with a cleaner way with less code?
 
-document
-  .querySelectorAll(".landing__container")
-  .forEach((sectionElm, index) => {
-    setSection(
-      section,
-      `This is Section ${index + 1}`,
-      "This is the first paragraph with some information in it.",
-      "This is the second paragraph with some information in it."
-    );
-  });
+// IMPROVEMENT 2: Add this code inside a function for "better documentation"
+
+const buildSections = () => {
+  document
+    .querySelectorAll(".landing__container")
+    .forEach((sectionElm, index) => {
+      setSection(
+        section,
+        `This is Section ${index + 1}`,
+        "This is the first paragraph with some information in it.",
+        "This is the second paragraph with some information in it."
+      );
+    });
+};
+
+buildSections();
 
 /*setSection(
   containers[0],
@@ -72,7 +78,7 @@ setSection(
 );*/
 
 //TIP: 2 try to remove the console.logs
-console.log(containers);
+// console.log(containers);
 
 // TIP 3: The comments bellow are there to help you organize the code! And some tips
 /**
