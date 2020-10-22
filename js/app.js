@@ -13,16 +13,16 @@
  *
  */
 
-setHeader = (header) => {
+// TIP 1: Add const to function definitions in =>. You are declaring functions or
+// variables, always declare the "type"
+const setHeader = (header) => {
   const headerMain = document.querySelector(".main__hero");
   const headerMainText = document.createElement("h1");
   headerMain.appendChild(headerMainText).textContent = header;
 };
 
-setHeader("Natalia's page");
-
-const containers = document.querySelectorAll(".landing__container");
-setSection = (cont, header, a, b) => {
+// TIP 3: Put the funciotns and variables declarations on the top of the file
+const setSection = (cont, header, a, b) => {
   const sectionHeader = document.createElement("h2");
   const sectionParagraphOne = document.createElement("p");
   const sectionParagraphTwo = document.createElement("p");
@@ -31,6 +31,10 @@ setSection = (cont, header, a, b) => {
   cont.appendChild(sectionParagraphOne).textContent = a;
   cont.appendChild(sectionParagraphTwo).textContent = b;
 };
+
+setHeader("Natalia's page");
+
+const containers = document.querySelectorAll(".landing__container");
 
 setSection(
   containers[0],
@@ -53,8 +57,10 @@ setSection(
   "This is the second paragraph with some information in it."
 );
 
+//TIP: 2 try to remove the console.logs
 console.log(containers);
 
+// TIP 3: The comments bellow are there to help you organize the code! And some tips
 /**
  * Define Global Variables
  *
