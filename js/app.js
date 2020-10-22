@@ -22,6 +22,8 @@ const setHeader = (header) => {
 };
 
 // TIP 3: Put the funciotns and variables declarations on the top of the file
+// TIP 4: a and b argument names do not explain what they are for, also as what you
+// add to this is the data of the section we could pass an object, we´ll see this later
 const setSection = (cont, header, a, b) => {
   const sectionHeader = document.createElement("h2");
   const sectionParagraphOne = document.createElement("p");
